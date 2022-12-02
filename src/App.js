@@ -28,7 +28,20 @@ function App() {
     }, 2000);
   }
 
-  const toggleMode = ()=>{
+  const removeBodyClass =()=>{
+    document.body.classList.remove('bg-light');
+    document.body.classList.remove('bg-danger');
+    document.body.classList.remove('bg-dark');
+    document.body.classList.remove('bg-primary');
+    document.body.classList.remove('bg-warning');
+    document.body.classList.remove('bg-success');
+    document.body.classList.remove('bg-info');
+  }
+
+  const toggleMode = (cls)=>{
+    removeBodyClass();
+    console.log(cls);
+    document.body.classList.add('bg-'+cls);
     if (mode === 'light'){
       setMode('dark');
       document.body.style.backgroundColor = '#083664';
