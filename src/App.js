@@ -40,7 +40,7 @@ function App() {
 
   const toggleMode = (cls)=>{
     removeBodyClass();
-    console.log(cls);
+    // console.log(cls);
     document.body.classList.add('bg-'+cls);
     if (mode === 'light'){
       setMode('dark');
